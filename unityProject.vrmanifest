@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.virtualergonomictutorial.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\ME\\Documents\\GitHub\\Virtual_Erg_Tutor\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Virtual Ergonomic Tutorial [Testing]"
+        }
+      }
+    }
+  ]
+}
