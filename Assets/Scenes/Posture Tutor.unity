@@ -126,7 +126,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 276464351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &54307770
+--- !u!114 &54307769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,7 +428,6 @@ GameObject:
   m_Component:
   - component: {fileID: 554848861}
   - component: {fileID: 554848862}
-  - component: {fileID: 554848863}
   m_Layer: 0
   m_Name: Tracker2
   m_TagString: Untagged
@@ -465,18 +464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 6
   origin: {fileID: 0}
---- !u!114 &554848863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554848860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276bf838918c3c04ea0eb9ecadaa6819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &671357026
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +690,6 @@ GameObject:
   m_Component:
   - component: {fileID: 892285269}
   - component: {fileID: 892285270}
-  - component: {fileID: 892285271}
   m_Layer: 0
   m_Name: Tracker1
   m_TagString: Untagged
@@ -740,18 +726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 5
   origin: {fileID: 0}
---- !u!114 &892285271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892285268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276bf838918c3c04ea0eb9ecadaa6819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1166442414
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +830,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 276464351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1426328745
+--- !u!114 &1426328744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1154,7 +1128,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1923618815}
   - component: {fileID: 1923618816}
-  - component: {fileID: 1923618817}
   m_Layer: 0
   m_Name: Tracker3
   m_TagString: Untagged
@@ -1191,18 +1164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 7
   origin: {fileID: 0}
---- !u!114 &1923618817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923618814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276bf838918c3c04ea0eb9ecadaa6819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1933181137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1262,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 276464351}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1985531476
+--- !u!114 &1985531475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

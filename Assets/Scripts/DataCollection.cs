@@ -7,12 +7,14 @@ using System;
 
 public class DataCollection : MonoBehaviour
 { 
+
+    private int bStartRecording;
     private List<string[]> rowData = new List<string[]>();
     
     private void Start()
     {
         Save();
-        
+        bStartRecording = 0;
     }
 
     void Save()
@@ -30,11 +32,20 @@ public class DataCollection : MonoBehaviour
     }
     void Update()
     {
-        if(gameObject.activeInHierarchy)
+        if(Input.GetKeyDown("r"))
+        {
+            bStartRecording = 1;
+            Debug.Log("Starting to Record Files");
+        }
+        if(Input.GetKeyDown("s"))
+        {
+            Debug.Log("Writing to File");
+            bStartRecording = 2;
+        }
+        if(bStartRecording == 1)
         {
             string[] rowDataTemp = new string[8];
             rowDataTemp[0] = name;
-            Debug.Log("Writing To List");
             rowDataTemp[1] = Time.time.ToString();
             rowDataTemp[2] = gameObject.transform.position.x.ToString();
             rowDataTemp[3] = gameObject.transform.position.y.ToString();
@@ -44,15 +55,15 @@ public class DataCollection : MonoBehaviour
             rowDataTemp[7] = gameObject.transform.rotation.eulerAngles.z.ToString();
             rowData.Add(rowDataTemp);
         }
-        else
+        else if(bStartRecording == 2)
         {
-            Debug.Log("Writing to File Now");
             WriteToFile();
+            bStartRecording = 0;
         }
     }
     void WriteToFile()
     {
-        Debug.Log("Writing to File");
+        Debug.Log("Writing to file now Hopefuly Only Once");
         string[][] output = new string[rowData.Count][];
 
         for(int i = 0; i < output.Length; i++)
@@ -73,12 +84,13 @@ public class DataCollection : MonoBehaviour
         StreamWriter outStream = System.IO.File.CreateText(filePath);
         outStream.WriteLine(sb);
         outStream.Close();
+        Debug.Log("Finished Writing to File");
     }
 
     private string getPath()
     {
       #if UNITY_EDITOR
-      return Application.dataPath + "/CSV" + "CurrentInfo.csv";
+      return Application.dataPath + "/CSV"+"CurrentInfo" + gameObject.name + ".csv";
       #else
       return Application.dataPath + "/"+"CurrentInfo.csv";
       #endif  
