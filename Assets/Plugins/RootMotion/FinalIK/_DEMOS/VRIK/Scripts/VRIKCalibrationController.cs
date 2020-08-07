@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using RootMotion.FinalIK;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 namespace RootMotion.Demos
 {
 
     public class VRIKCalibrationController : MonoBehaviour
     {
-
+        //[Tooltip("Pass the Player")] public GameObject player;
         [Tooltip("Reference to the VRIK component on the avatar.")] public VRIK ik;
         [Tooltip("The settings for VRIK calibration.")] public VRIKCalibrator.Settings settings;
         [Tooltip("The HMD.")] public Transform headTracker;
@@ -19,10 +21,9 @@ namespace RootMotion.Demos
 
         [Header("Data stored by Calibration")]
         public VRIKCalibrator.CalibrationData data = new VRIKCalibrator.CalibrationData();
-
         void LateUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.C)) // replace with hand controller key
             {
                 // Calibrate the character, store data of the calibration
                 data = VRIKCalibrator.Calibrate(ik, settings, headTracker, bodyTracker, leftHandTracker, rightHandTracker, leftFootTracker, rightFootTracker);
