@@ -25,9 +25,6 @@ public class DataCollection : MonoBehaviour
         rowDataTemp[2] = "PosX";
         rowDataTemp[3] = "PosY";
         rowDataTemp[4] = "PosZ";
-        /*rowDataTemp[5] = "RotX";
-        rowDataTemp[6] = "RotY";
-        rowDataTemp[7] = "RotZ";*/
         rowData.Add(rowDataTemp);
     }
     void Update()
@@ -50,9 +47,6 @@ public class DataCollection : MonoBehaviour
             rowDataTemp[2] = gameObject.transform.position.x.ToString();
             rowDataTemp[3] = gameObject.transform.position.y.ToString();
             rowDataTemp[4] = gameObject.transform.position.z.ToString();
-            /*rowDataTemp[5] = gameObject.transform.rotation.eulerAngles.x.ToString();
-            rowDataTemp[6] = gameObject.transform.rotation.eulerAngles.y.ToString();
-            rowDataTemp[7] = gameObject.transform.rotation.eulerAngles.z.ToString();*/
             rowData.Add(rowDataTemp);
         }
         else if(bStartRecording == 2)
@@ -90,7 +84,7 @@ public class DataCollection : MonoBehaviour
     private string getPath()
     {
       #if UNITY_EDITOR
-      return Application.dataPath + "/CSV"+"ObjectData" + ".csv";
+      return Application.dataPath + "/CSV"+"ObjectData" + name + ".csv";
       #else
       return Application.dataPath + "/"+"CurrentInfo.csv";
       #endif  
