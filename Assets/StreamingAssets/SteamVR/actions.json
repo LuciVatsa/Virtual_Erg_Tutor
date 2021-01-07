@@ -81,6 +81,14 @@
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIKCalibratorSet/in/Calibrate",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIKCalibratorSet/in/SpawnBox",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -98,6 +106,14 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/VRIKCalibratorSet",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/NewSet",
       "usage": "single"
     }
   ],

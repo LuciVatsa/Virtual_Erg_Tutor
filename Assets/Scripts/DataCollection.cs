@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -29,19 +28,19 @@ public class DataCollection : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown("r"))
+        if(Input.GetKeyDown("g"))
         {
             bStartRecording = 1;
             Debug.Log("Starting to Record Files");
         }
-        if(Input.GetKeyDown("s"))
+        if(Input.GetKeyDown("p"))
         {
             Debug.Log("Writing to File");
             bStartRecording = 2;
         }
         if(bStartRecording == 1)
         {
-            string[] rowDataTemp = new string[8];
+            string[] rowDataTemp = new string[5];
             rowDataTemp[0] = name;
             rowDataTemp[1] = Time.time.ToString();
             rowDataTemp[2] = gameObject.transform.position.x.ToString();
@@ -84,7 +83,8 @@ public class DataCollection : MonoBehaviour
     private string getPath()
     {
       #if UNITY_EDITOR
-      return Application.dataPath + "/CSV"+"ObjectData" + name + ".csv";
+
+      return Application.dataPath + "/CSV"+ "ObjectData" + name + DateTime.Now.Hour + DateTime.Now.Minute + ".csv";
       #else
       return Application.dataPath + "/"+"CurrentInfo.csv";
       #endif  
